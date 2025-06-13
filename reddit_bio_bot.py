@@ -48,7 +48,7 @@ async def generate(update: Update, context: ContextTypes.DEFAULT_TYPE):
     cta = random.choice(CTA_OPTIONS)
     obfuscated_handle = obfuscate(handle)
 
-        prompt = (
+    prompt = (
         f"You are an AI that writes long-form Tinder bios designed to drive traffic to the middle of the profile, "
         f"where the Telegram prompt is placed.\n\n"
         f"The model you’re writing for is: {model}, a flirtatious and friendly girl from {city}.\n"
