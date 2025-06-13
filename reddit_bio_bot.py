@@ -48,29 +48,17 @@ async def generate(update: Update, context: ContextTypes.DEFAULT_TYPE):
     cta = random.choice(CTA_OPTIONS)
     obfuscated_handle = obfuscate(handle)
 
-    prompt = (
+        prompt = (
         f"You are an AI that writes long-form Tinder bios designed to drive traffic to the middle of the profile, "
-        f"where the Telegram prompt is placed.
-
-"
-        f"The model you’re writing for is: {model}, a flirtatious and friendly girl from {city}.
-"
-        f"Your goal is to generate a bio that:
-"
-        f"- Sounds like a real girl texting her thoughts
-"
-        f"- Is between 425–475 characters
-"
-        f"- Uses lowercase and emotional hooks
-"
-        f"- Guides the reader toward the Telegram handle
-"
-        f"- Ends with something like: {cta};{obfuscated_handle}
-
-"
-        f"Important: Do not mention OnlyFans. Write casually with human imperfections.
-
-"
+        f"where the Telegram prompt is placed.\n\n"
+        f"The model you’re writing for is: {model}, a flirtatious and friendly girl from {city}.\n"
+        f"Your goal is to generate a bio that:\n"
+        f"- Sounds like a real girl texting her thoughts\n"
+        f"- Is between 425–475 characters\n"
+        f"- Uses lowercase and emotional hooks\n"
+        f"- Guides the reader toward the Telegram handle\n"
+        f"- Ends with something like: {cta};{obfuscated_handle}\n\n"
+        f"Important: Do not mention OnlyFans. Write casually with human imperfections.\n\n"
         f"Now write the bio:"
     )
 
